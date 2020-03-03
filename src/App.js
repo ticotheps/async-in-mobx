@@ -21,19 +21,20 @@ class App extends Component {
 
 		return (
 			<div className='App'>
-				<h1>Welcome to the Kanye Random Quotes Generator!</h1>
-				<h2>Total Number of Kanye Quotes: {QuoteStore.quoteCount}</h2>
+				<h1>Welcome to the Jesus Quotes Generator!</h1>
+				<h2>Total Number of Jesus Quotes: {QuoteStore.quoteCount}</h2>
 				<form onSubmit={e => this.handleSubmit(e)}>
 					<input
 						type='text'
 						placeholder='Enter Quote'
 						ref={input => (this.quote = input)}
+						required
 					/>
 					<button>Add Quote</button>
 				</form>
 				<ul>
 					{QuoteStore.quotes.map((quote, index) => (
-						<li key={index}>{quote}</li>
+						<li key={index}>"{quote}" -Jesus</li>
 					))}
 				</ul>
 				<JSONPretty json={this.props.QuoteStore.quoteData} />
