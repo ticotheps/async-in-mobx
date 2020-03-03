@@ -15,7 +15,15 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<h1>Welcome to the Kanye Random Quotes Generator!</h1>
-				<h2>Total Number of Kanye Quotes: {QuoteStore.quoteCount} </h2>
+				<h2>Total Number of Kanye Quotes: {QuoteStore.quoteCount}</h2>
+				<form onSubmit={e => this.handleSubmit(e)}>
+					<input
+						type='text'
+						placeholder='Enter Quote'
+						ref={input => (this.quote = input)}
+					/>
+					<button>Add Quote</button>
+				</form>
 				<JSONPretty json={this.props.QuoteStore.quoteData} />
 			</div>
 		);
