@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import JSONPretty from 'react-json-pretty';
+import QuoteStore from './stores/QuoteStore';
 
 import './App.css';
 
@@ -33,11 +34,15 @@ class App extends Component {
 					<button>Add Quote</button>
 				</form>
 				<ul>
-					{QuoteStore.quotes.map((quote, index) => (
-						<li key={index}>
-							<strong>"{quote}"</strong> -Jesus
-						</li>
-					))}
+					{!this.QuoteStore ? (
+						QuoteStore.quotes.map((quote, index) => (
+							<li key={index}>
+								<strong>"{quote}"</strong> -Jesus
+							</li>
+						))
+					) : (
+						<div>Loading...</div>
+					)}
 				</ul>
 				<JSONPretty json={this.props.QuoteStore.quoteData} />
 			</div>

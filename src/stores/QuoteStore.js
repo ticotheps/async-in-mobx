@@ -9,16 +9,23 @@ import {
 } from 'mobx';
 
 class QuoteStore {
-	@observable quotes = [];
-
-	@action addQuote = quote => {
+	quotes = [];
+	quoteData = {};
+	addQuote = quote => {
 		this.quotes.push(quote);
 	};
 
-	@computed get quoteCount() {
-		return this.quotes.length;
-	}
+	// get quoteCount() {
+	// 	return this.quotes.length;
+	// }
 }
 
-const store = new QuoteStore();
-export default store;
+decorate(QuoteStore, {
+	quotes: observable,
+	quoteData: observable,
+	addQuote: action
+	// quoteCount: computed
+});
+
+// const store = new QuoteStore();
+export default new QuoteStore();
