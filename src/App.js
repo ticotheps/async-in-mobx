@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-	return (
-		<div className='App'>
-			<h1>Random Kanye West Quotes Generator!</h1>
-		</div>
-	);
+class App extends Component {
+	render() {
+		return (
+			<div className='App'>
+				<h1>Welcome to the Kanye Random Quotes Generator!</h1>
+			</div>
+		);
+	}
 }
 
 export default App;
