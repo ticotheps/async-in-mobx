@@ -5,11 +5,11 @@ class QuoteStore {
 
 	@action addQuote = quote => {
 		this.quotes.push(quote);
-    };
-    
-    @computed get quoteCount {
-        return this.quotes.length;
-    }
+	};
+
+	@computed get quoteCount() {
+		return this.quotes.length;
+	}
 }
 
 const store = new QuoteStore();
