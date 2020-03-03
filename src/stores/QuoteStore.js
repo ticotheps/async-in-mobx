@@ -1,4 +1,12 @@
-import { observable, action, computed } from 'mobx';
+import {
+	configure,
+	action,
+	observable,
+	runinaction,
+	flow,
+	decorate,
+	computed
+} from 'mobx';
 
 class QuoteStore {
 	@observable quotes = [];
