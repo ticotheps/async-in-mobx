@@ -10,6 +10,7 @@
     "mobx-react": "^6.1.8",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-json-pretty": "^2.2.0",
     "react-scripts": "3.4.0"
   },
   "scripts": {
