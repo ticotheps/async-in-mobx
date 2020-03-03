@@ -138,7 +138,18 @@
 			"react-app"
 		],
 		"plugins": [
-			"transform-decorators-legacy"
+			[
+				"@babel/plugin-proposal-decorators",
+				{
+					"legacy": true
+				}
+			],
+			[
+				"@babel/plugin-proposal-class-properties",
+				{
+					"loose": true
+				}
+			]
 		]
 	}
 }
