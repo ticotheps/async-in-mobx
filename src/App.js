@@ -31,6 +31,11 @@ class App extends Component {
 					/>
 					<button>Add Quote</button>
 				</form>
+				<ul>
+					{QuoteStore.quotes.map((quote, index) => (
+						<li key={index}>{quote}</li>
+					))}
+				</ul>
 				<JSONPretty json={this.props.QuoteStore.quoteData} />
 			</div>
 		);
