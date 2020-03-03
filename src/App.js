@@ -9,6 +9,13 @@ class App extends Component {
 	// 	this.props.QuoteStore.loadQuotes();
 	// }
 
+	handleSubmit = e => {
+		e.preventDefault();
+		const quote = this.quote.value;
+		this.props.QuoteStore.addQuote(quote);
+		this.quote.value = '';
+	};
+
 	render() {
 		const { QuoteStore } = this.props;
 
